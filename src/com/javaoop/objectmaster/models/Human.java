@@ -1,4 +1,4 @@
-package com.javaoop.objectmaster;
+package com.javaoop.objectmaster.models;
 
 public class Human {
 	private int health = 100;
@@ -47,11 +47,8 @@ public class Human {
 	}
 	
 	public void displayStats() {
-		int health = getHealth();
-		int strength = getStrength();
-		int stealth = getStealth();
-		int intel = getIntelligence();
-		System.out.printf("\nHealth: %d | Strength: %d | Stealth: %d | Intel: %d ", 
+		System.out.printf("\nClass: %s | Health: %d | Strength: %d | Stealth: %d | Intel: %d ",
+				this.getClass().getSimpleName(),
 				this.health, 
 				this.strength, 
 				this.stealth, 
@@ -59,7 +56,8 @@ public class Human {
 	}
 	
 	public void attack(Human target) {
-		target.health -= this.stealth;
+		System.out.printf("\nAttack: -%d", this.strength);
+		target.health -= this.strength;
 	}
 	
 }

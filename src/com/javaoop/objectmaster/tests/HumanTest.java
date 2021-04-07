@@ -1,4 +1,6 @@
-package com.javaoop.objectmaster;
+package com.javaoop.objectmaster.tests;
+
+import com.javaoop.objectmaster.models.Human;
 
 public class HumanTest {
 
